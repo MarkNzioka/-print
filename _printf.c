@@ -15,7 +15,8 @@ int _printf(const char *format, ...)
 		{'s', print_string},
 		{'%', print_percent},
 		{'d', print_decimal},
-		{'i', print_integer}
+		{'i', print_integer},
+		{'b', print_binary}
 	};
 	va_start(args, format);
 	while (*format)
