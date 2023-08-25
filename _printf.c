@@ -22,6 +22,10 @@ int _printf(const char *format, ...)
 		{
 			format++;
 			specifier_found = 0;
+			if (*format == '\0')
+				break;
+			if (*format == ' ')
+				return (-1);
 			for (i = 0; i < sizeof(handlers) / sizeof(handlers[0]); i++)
 			{
 				if (*format == handlers[i].specifier)
