@@ -13,7 +13,9 @@ int _printf(const char *format, ...)
 	conversion_handler handlers[] = {
 		{'c', print_char},
 		{'s', print_string},
-		{'%', print_percent}
+		{'%', print_percent},
+		{'d', print_decimal},
+		{'i', print_integer}
 	};
 	va_start(args, format);
 	while (*format)
