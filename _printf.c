@@ -16,7 +16,11 @@ int _printf(const char *format, ...)
 		{'%', print_percent},
 		{'d', print_decimal},
 		{'i', print_integer},
-		{'b', print_binary}
+		{'b', print_binary},
+		{'x', print_hex_lower},
+		{'X', print_hex_upper},
+		{'o', print_octal},
+		{'u', print_unsigned}
 	};
 	va_start(args, format);
 	while (*format)
