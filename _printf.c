@@ -6,7 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int chars_printed = 0, specifier_found;
+	int chars_printed = 0;/*specifier_found*/
 	va_list args;
 	size_t i = 0;
 
@@ -21,18 +21,18 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			specifier_found = 0;
+			/*specifier_found = 0;*/
 			for (i = 0; i < sizeof(handlers) / sizeof(handlers[0]); i++)
 			{
 				if (*format == handlers[i].specifier)
 				{
 					chars_printed += handlers[i].handler(args);
-					specifier_found = 1;
+					/*specifier_found = 1;*/
 					break;
 				}
 			}
-			if (!specifier_found)
-				chars_printed += print_unknown(args, *format);
+			/*if (!specifier_found)*/
+				/*chars_printed += print_unknown(args, *format);*/
 		}
 		else
 		{
